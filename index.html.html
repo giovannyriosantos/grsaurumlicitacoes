@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRS Aurum Licitações</title>
+  <style>
+    body {margin:0;font-family:Arial, sans-serif;background:#0a0a0a;color:#d4af37}
+    header {background:#0a0a0a;color:#d4af37;padding:60px 20px;text-align:center}
+    .logo {font-size:42px;font-weight:bold;letter-spacing:3px}
+    .logo span {display:block;font-size:20px;letter-spacing:4px}
+    header p {font-size:18px;opacity:0.9;margin-top:15px}
+    nav {background:#111;display:flex;justify-content:center;gap:20px;padding:12px}
+    nav a {color:#d4af37;text-decoration:none;font-weight:bold}
+    section {padding:50px 20px;max-width:1000px;margin:auto}
+    .card {background:#111;padding:30px;margin:20px 0;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.6)}
+    .highlight {color:#d4af37;font-weight:bold}
+    footer {background:#0a0a0a;color:#d4af37;text-align:center;padding:20px}
+    .btn {display:inline-block;background:#d4af37;color:#000;padding:14px 25px;border-radius:6px;text-decoration:none;margin-top:15px;font-weight:bold}
+    input, textarea {width:100%;padding:12px;margin:8px 0;border-radius:6px;border:1px solid #333;background:#000;color:#d4af37}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    GRS
+    <span>AURUM LICITAÇÕES</span>
+  </div>
+  <p>Transformamos fornecedores comuns em vendedores do governo</p>
+  <a class="btn" href="https://wa.me/5592984213363" target="_blank">Falar no WhatsApp</a>
+</header>
+
+<nav>
+  <a href="#sobre">Sobre</a>
+  <a href="#vantagens">Vantagens</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section id="sobre">
+  <div class="card">
+    <h2>Quem Somos</h2>
+    <p>A <span class="highlight">GRS Aurum Licitações</span> é especialista em fazer fornecedores venderem para o governo de forma estratégica e lucrativa.</p>
+    <p>Nós cuidamos de todo o processo para você: desde encontrar oportunidades até ganhar contratos.</p>
+    <p><strong>Se você quer faturar com licitações, nós somos o caminho mais rápido e seguro.</strong></p>
+  </div>
+</section>
+
+<section id="vantagens">
+  <div class="card">
+    <h2>Por que escolher a GRS?</h2>
+    <ul>
+      <li>Você não precisa entender de licitação</li>
+      <li>Economiza tempo e evita erros</li>
+      <li>Aumenta suas chances de ganhar</li>
+      <li>Foco total em lucro e resultado</li>
+      <li>Atendimento direto e estratégico</li>
+    </ul>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="card">
+    <h2>Nossos Serviços</h2>
+    <ul>
+      <li>Participação completa em licitações</li>
+      <li>Gestão total dos processos</li>
+      <li>Consultoria para fornecedores</li>
+      <li>Busca de oportunidades</li>
+      <li>Intermediação com órgãos públicos</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="card">
+    <h2>Fale com a gente</h2>
+    <p>Preencha abaixo que vamos te chamar direto no WhatsApp:</p>
+
+    <form onsubmit="enviarWhats(event)">
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <input type="text" id="empresa" placeholder="Sua empresa">
+      <textarea id="mensagem" placeholder="O que você precisa?"></textarea>
+      <button class="btn" type="submit">Enviar no WhatsApp</button>
+    </form>
+
+    <p><strong>WhatsApp:</strong> (92) 98421-3363</p>
+    <p><strong>Endereço:</strong> Manaus - AM</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 GRS Aurum Licitações - Todos os direitos reservados</p>
+</footer>
+
+<script>
+function enviarWhats(event) {
+  event.preventDefault();
+  var nome = document.getElementById('nome').value;
+  var empresa = document.getElementById('empresa').value;
+  var mensagem = document.getElementById('mensagem').value;
+
+  var texto = `Olá, me chamo ${nome}. Empresa: ${empresa}. ${mensagem}`;
+  var url = `https://wa.me/5592984213363?text=${encodeURIComponent(texto)}`;
+
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
